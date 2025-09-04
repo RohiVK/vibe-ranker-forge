@@ -52,34 +52,35 @@ export const HowItWorks = () => {
           {steps.map((step, index) => (
             <Card 
               key={index}
-              className="p-8 bg-card border-border hover:shadow-card transition-smooth text-center group relative"
+              className="p-8 bg-card border-border hover:shadow-card hover:shadow-primary/20 transition-all duration-500 text-center group relative hover:-translate-y-3 hover:scale-105 cursor-pointer"
+              style={{ animationDelay: `${index * 150}ms` }}
             >
               {/* Step Number */}
-              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-8 h-8 bg-gradient-primary rounded-full flex items-center justify-center text-sm font-bold text-primary-foreground">
+              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-8 h-8 bg-gradient-primary rounded-full flex items-center justify-center text-sm font-bold text-primary-foreground group-hover:scale-125 group-hover:rotate-12 transition-all duration-300 group-hover:shadow-glow">
                 {step.step}
               </div>
 
               <div className="pt-4">
                 {/* Icon */}
                 <div className="flex justify-center mb-6">
-                  <div className="p-4 rounded-xl bg-gradient-primary/10 group-hover:bg-gradient-primary/20 transition-smooth">
-                    <step.icon className="w-8 h-8 text-primary" />
+                  <div className="p-4 rounded-xl bg-gradient-primary/10 group-hover:bg-gradient-primary/30 group-hover:scale-110 transition-all duration-300 group-hover:-rotate-6">
+                    <step.icon className="w-8 h-8 text-primary group-hover:text-primary-glow transition-colors duration-300" />
                   </div>
                 </div>
 
                 {/* Content */}
-                <h3 className="text-xl font-semibold text-foreground mb-4">
+                <h3 className="text-xl font-semibold text-foreground mb-4 group-hover:text-primary transition-colors duration-300">
                   {step.title}
                 </h3>
                 
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-muted-foreground leading-relaxed group-hover:text-foreground/80 transition-colors duration-300">
                   {step.description}
                 </p>
               </div>
 
               {/* Connector Line (hidden on last item) */}
               {index < steps.length - 1 && (
-                <div className="hidden lg:block absolute top-1/2 -right-4 w-8 h-0.5 bg-gradient-primary/30 transform -translate-y-1/2" />
+                <div className="hidden lg:block absolute top-1/2 -right-4 w-8 h-0.5 bg-gradient-primary/30 transform -translate-y-1/2 group-hover:bg-gradient-primary/60 transition-colors duration-300" />
               )}
             </Card>
           ))}

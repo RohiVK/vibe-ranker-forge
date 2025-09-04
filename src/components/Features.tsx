@@ -58,18 +58,19 @@ export const Features = () => {
           {features.map((feature, index) => (
             <Card 
               key={index} 
-              className="p-8 bg-card border-border hover:shadow-card transition-smooth hover:-translate-y-1 group"
+              className="p-8 bg-card border-border hover:shadow-card hover:shadow-glow/50 transition-all duration-500 hover:-translate-y-2 hover:scale-105 group cursor-pointer"
+              style={{ animationDelay: `${index * 100}ms` }}
             >
               <div className="flex flex-col items-start space-y-4">
-                <div className="p-3 rounded-xl bg-gradient-primary/10 group-hover:bg-gradient-primary/20 transition-smooth">
-                  <feature.icon className="w-6 h-6 text-primary" />
+                <div className="p-3 rounded-xl bg-gradient-primary/10 group-hover:bg-gradient-primary/30 group-hover:scale-110 transition-all duration-300 group-hover:rotate-3">
+                  <feature.icon className="w-6 h-6 text-primary group-hover:text-primary-glow transition-colors duration-300" />
                 </div>
                 
-                <h3 className="text-xl font-semibold text-foreground">
+                <h3 className="text-xl font-semibold text-foreground group-hover:text-primary transition-colors duration-300">
                   {feature.title}
                 </h3>
                 
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-muted-foreground leading-relaxed group-hover:text-foreground/80 transition-colors duration-300">
                   {feature.description}
                 </p>
               </div>
