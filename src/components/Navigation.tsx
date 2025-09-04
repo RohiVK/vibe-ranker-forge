@@ -24,9 +24,6 @@ export const Navigation = () => {
             <a href="#how-it-works" className="text-muted-foreground hover:text-foreground transition-smooth">
               How It Works
             </a>
-            <a href="#about" className="text-muted-foreground hover:text-foreground transition-smooth">
-              About
-            </a>
           </div>
 
           {/* CTA Buttons */}
