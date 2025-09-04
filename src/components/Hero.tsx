@@ -28,7 +28,7 @@ export const Hero = () => {
         <div className="inline-flex items-center gap-2 bg-card/50 backdrop-blur-sm border border-border rounded-full px-4 py-2 mb-8 transition-smooth hover:shadow-glow">
           <TrendingUp className="w-4 h-4 text-accent" />
           <span className="text-sm font-medium text-muted-foreground">
-            Trusted by 50,000+ students
+            For our university community
           </span>
         </div>
 
@@ -57,7 +57,7 @@ export const Hero = () => {
           </Button>
         </div>
 
-        {/* Stats */}
+        {/* Quick Info */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
           <div className="flex flex-col items-center space-y-2">
             <div className="flex items-center gap-1 text-accent mb-1">
@@ -67,20 +67,20 @@ export const Hero = () => {
               <Star className="w-5 h-5 fill-current" />
               <Star className="w-5 h-5 fill-current" />
             </div>
-            <div className="text-2xl font-bold text-foreground">1M+</div>
-            <div className="text-sm text-muted-foreground">Professor Reviews</div>
+            <div className="text-2xl font-bold text-foreground">Authentic</div>
+            <div className="text-sm text-muted-foreground">Student Reviews</div>
           </div>
           
           <div className="flex flex-col items-center space-y-2">
             <Users className="w-6 h-6 text-primary mb-1" />
-            <div className="text-2xl font-bold text-foreground">50K+</div>
-            <div className="text-sm text-muted-foreground">Active Students</div>
+            <div className="text-2xl font-bold text-foreground">Verified</div>
+            <div className="text-sm text-muted-foreground">University Students</div>
           </div>
           
           <div className="flex flex-col items-center space-y-2">
             <TrendingUp className="w-6 h-6 text-accent mb-1" />
-            <div className="text-2xl font-bold text-foreground">2K+</div>
-            <div className="text-sm text-muted-foreground">Universities</div>
+            <div className="text-2xl font-bold text-foreground">Smart</div>
+            <div className="text-sm text-muted-foreground">Course Decisions</div>
           </div>
         </div>
       </div>
